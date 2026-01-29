@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta property="og:title" content="Ayutron Pharmaceutical LLP">
+    <meta property="og:description" content="Global Medicines, Inclusive Healthcare">
+    <meta property="og:image" content="https://yourdomain.com/assets/ayutron-og.png">
+    <meta property="og:type" content="website">
     <title>Ayutron Pharmaceutical - Contact Information</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link
@@ -16,17 +20,18 @@
             padding: 0;
             background-color: #f3f4f6;
             font-family: 'Inter', sans-serif;
-            overflow: hidden;
+            overflow: auto;
         }
 
         .slide-container {
-            width: 1280px;
-            height: 720px;
+            max-width: 1280px;
+            min-height: 100vh;
             background-color: #ffffff;
             position: relative;
             display: flex;
-            overflow: hidden;
+            overflow: auto;
         }
+
 
         .font-poppins {
             font-family: 'Poppins', sans-serif;
@@ -78,14 +83,137 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
+
+        @media (max-width: 768px) {
+
+            body {
+                overflow: auto;
+            }
+
+            .slide-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            /* Left panel */
+            .slide-container>div:first-child {
+                width: 100% !important;
+                padding: 2.5rem 1.5rem;
+            }
+
+            /* Right panel */
+            .slide-container>div:last-child {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Headings */
+            h1 {
+                font-size: 2.25rem !important;
+                line-height: 2.5rem;
+            }
+
+            a,
+            p {
+                overflow-x:auto;
+                overflow-y: auto;
+            }
+
+            /* Contact grid becomes single column */
+            .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            /* Reduce icon size */
+            .contact-icon-box {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            /* Text scaling */
+            p,
+            a {
+                font-size: 0.95rem;
+                overflow-x: auto;
+                overflow-y: auto;
+            }
+
+            /* Logo spacing */
+            img {
+                max-width: 220px;
+            }
+        }
+
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            body {
+                overflow: auto;
+            }
+
+            .slide-container {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                border-radius: 20px;
+            }
+
+            /* Brand Panel */
+            .slide-container>div:first-child {
+                width: 100%;
+                height: auto;
+                padding: 3rem 2.5rem;
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+            }
+
+            .slide-container img {
+                max-width: 220px;
+            }
+
+            /* Right Content Panel */
+            .slide-container>div:last-child {
+                padding: 3rem;
+            }
+
+            /* Header */
+            h1 {
+                font-size: 2.75rem;
+                line-height: 1.1;
+            }
+
+            /* Contact Grid */
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-icon-box {
+                width: 46px;
+                height: 46px;
+                font-size: 1.1rem;
+            }
+
+            /* Spacing Adjustments */
+            .space-y-10>*+* {
+                margin-top: 2.5rem;
+            }
+
+            a,
+            p {
+                overflow: auto
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="slide-container mx-auto">
+    <div class="slide-container mx-auto w-full">
+
         <!-- Left Brand Panel (35%) -->
-        <div
-            class="w-[35%] h-full bg-brand-green relative flex flex-col items-center justify-center p-12 text-center z-20">
+        <div class="w-[35%]  bg-brand-green relative flex flex-col items-center justify-center p-12 text-center z-20">
             <!-- Background Pattern -->
             <div class="absolute inset-0 pattern-dots opacity-50 z-0"></div>
             <!-- Decorative Circles -->
@@ -98,15 +226,15 @@
             <!-- Content -->
             <div class="relative z-10 w-full flex flex-col items-center">
                 <!-- Logo Card -->
-                <div
-                    class="rounded-2xl  mb-10 w-full max-w-xs transform hover:scale-105 transition-transform duration-500">
-                    <img alt="Ayutron Logo" class="w-full h-auto object-contain" src="./assets/Ayutron.png"
+                <div class="rounded-2xl  mb-10  max-w-xs transform hover:scale-105 transition-transform duration-500">
+                    <img alt="Ayutron Logo" class=" h-auto object-contain" src="./assets/Ayutron.png"
                         data-height-listener-added="true">
                 </div>
                 <!-- <h2 class="font-poppins text-3xl font-bold text-white mb-3">Ayutron</h2> -->
                 <div class="w-16 h-1 bg-white/50 rounded-full mb-4"></div>
-                <p class="font-poppins text-xl text-white font-light tracking-wide italic">"Global medicines, 
-                                                                                          <br>Inclusive Healthcare."</p>
+                <p class="font-poppins text-xl text-white font-light tracking-wide italic">"Global medicines,
+                    <br>Inclusive Healthcare."
+                </p>
 
             </div>
         </div>
@@ -134,7 +262,7 @@
                         <div>
                             <h3 class="font-poppins text-base font-semibold text-slate-800 mb-1">Email Address</h3>
                             <a href="mailto:ayutronpharmaceuticalllp@gmail.com"
-                                class="font-inter text-gray-600 text-base break-words hover:text-brand-green">ayutronpharmaceuticalllp@gmail.com</a>
+                                class="font-inter text-gray-600 text-base overflow-auto hover:text-brand-green">ayutronpharmaceuticalllp@gmail.com</a>
                         </div>
                     </div>
                     <!-- Website -->
@@ -157,14 +285,20 @@
                         </div>
                         <div>
                             <h3 class="font-poppins text-base font-semibold text-slate-800 mb-1">Products & Profile</h3>
-                            <a href="https://drive.google.com/drive/folders/1B_tcRt3Hpkhif_huCyAHkOMLdtBPMy86?usp=drive_link"  class="font-inter text-brand-green hover:underline text-base cursor-pointer" target="_blank">Products</a>
-                            <br><a href="https://drive.google.com/drive/folders/1H9htnEgAM9GABySHq7TjHmotvlFt62iS?usp=drive_link"  class="font-inter text-brand-green hover:underline text-base cursor-pointer" target="_blank">Company Profile</a><!-- <p class="font-inter text-gray-600 text-base">+91-9638287740</p> -->
+                            <a href="https://drive.google.com/drive/folders/1B_tcRt3Hpkhif_huCyAHkOMLdtBPMy86?usp=drive_link"
+                                class="font-inter text-brand-green hover:underline text-base cursor-pointer"
+                                target="_blank">Products</a>
+                            <br><a
+                                href="https://drive.google.com/drive/folders/1H9htnEgAM9GABySHq7TjHmotvlFt62iS?usp=drive_link"
+                                class="font-inter text-brand-green hover:underline text-base cursor-pointer"
+                                target="_blank">Company
+                                Profile</a><!-- <p class="font-inter text-gray-600 text-base">+91-9638287740</p> -->
                         </div>
                     </div>
-                    
 
 
-                         <!-- Phone -->
+
+                    <!-- Phone -->
                     <div class="flex items-start contact-group">
                         <div class="contact-icon-box mr-5 shadow-sm">
                             <i class="fas fa-phone-alt"></i>
@@ -172,7 +306,7 @@
                         <div>
                             <h3 class="font-poppins text-base font-semibold text-slate-800 mb-1">Phone Numbers</h3>
                             <a href="tel:+919638287740" class="font-inter text-gray-600 text-base">Call us at:
-                                +91-9638287740</a>
+                                +91-9638287740</a> <br>
                             <a href="https://wa.me/917801864480?text=Let’s%20connect"
                                 class="font-inter text-gray-600 text-base" target="_blank">WhatsApp us at:
                                 +91-7801864480</a>
@@ -180,7 +314,7 @@
                         </div>
                     </div>
 
-                    
+
                     <!-- Registered Office -->
                     <div class="flex items-start contact-group">
                         <div class="contact-icon-box mr-6 shadow-sm">
@@ -202,7 +336,9 @@
                         </div>
                         <div>
                             <h3 class="font-poppins text-base font-semibold text-slate-800 mb-1">LinkedIn</h3>
-                            <a href="https://www.linkedin.com/company/ayutronpharma/" class="font-inter text-brand-green hover:underline text-base cursor-pointer" target="_blank">
+                            <a href="https://www.linkedin.com/company/ayutronpharma/"
+                                class="font-inter text-brand-green hover:underline text-base cursor-pointer"
+                                target="_blank">
                                 @ayutronpharma</a>
                         </div>
                     </div>
